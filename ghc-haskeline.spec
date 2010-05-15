@@ -10,6 +10,7 @@ Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkg
 URL:		http://hackage.haskell.org/package/%{pkgname}/
 BuildRequires:	ghc >= 6.10
 BuildRequires:	ghc-utf8-string >= 0.3.6
+BuildRequires:	gmp-devel
 %requires_eq	ghc
 Requires:	ghc-utf8-string >= 0.3.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -17,10 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		libsubdir	ghc-%(/usr/bin/ghc --numeric-version)/%{pkgname}-%{version}
 
 %description
-Haskeline provides a user interface for line input in
-command-line programs. This library is similar in purpose
-to readline, but since it is written in Haskell it is
-(hopefully) more easily used in other Haskell programs. 
+Haskeline provides a user interface for line input in command-line
+programs. This library is similar in purpose to readline, but since it
+is written in Haskell it is (hopefully) more easily used in other
+Haskell programs.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
