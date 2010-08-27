@@ -1,12 +1,12 @@
 %define	pkgname	haskeline
 Summary:	A command-line interface for user input, written in Haskell
 Name:		ghc-%{pkgname}
-Version:	0.6.2.2
+Version:	0.6.2.3
 Release:	1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	c23a8ffbcff7cb42f0ee6ca6946285bb
+# Source0-md5:	4e48c5dd0133f20ce69c6a5813fb82d9
 URL:		http://hackage.haskell.org/package/%{pkgname}/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-utf8-string >= 0.3.6
