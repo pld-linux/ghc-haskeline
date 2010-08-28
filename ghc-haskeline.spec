@@ -2,7 +2,7 @@
 Summary:	A command-line interface for user input, written in Haskell
 Name:		ghc-%{pkgname}
 Version:	0.6.2.3
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
