@@ -2,16 +2,18 @@
 Summary:	A command-line interface for user input, written in Haskell
 Name:		ghc-%{pkgname}
 Version:	0.6.2.3
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
 # Source0-md5:	4e48c5dd0133f20ce69c6a5813fb82d9
 URL:		http://hackage.haskell.org/package/%{pkgname}/
 BuildRequires:	ghc >= 6.12.3
+BuildRequires:	ghc-mtl
 BuildRequires:	ghc-utf8-string >= 0.3.6
 BuildRequires:	gmp-devel
 %requires_releq	ghc
+Requires:	ghc-mtl
 Requires:	ghc-utf8-string >= 0.3.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
