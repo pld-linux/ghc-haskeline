@@ -11,7 +11,7 @@ URL:		http://hackage.haskell.org/package/%{pkgname}/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-utf8-string >= 0.3.6
 BuildRequires:	gmp-devel
-%requires_eq	ghc
+%requires_releq	ghc
 Requires:	ghc-utf8-string >= 0.3.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
