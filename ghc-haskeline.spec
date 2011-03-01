@@ -13,9 +13,9 @@ BuildRequires:	ghc-mtl
 BuildRequires:	ghc-utf8-string >= 0.3.6
 BuildRequires:	gmp-devel
 BuildRequires:	rpmbuild(macros) >= 1.608
-%requires_eq	ghc
 Requires:	ghc-mtl
 Requires:	ghc-utf8-string >= 0.3.6
+%requires_eq	ghc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # debuginfo is not useful for ghc
@@ -26,6 +26,17 @@ Haskeline provides a user interface for line input in command-line
 programs. This library is similar in purpose to readline, but since it
 is written in Haskell it is (hopefully) more easily used in other
 Haskell programs.
+
+%package doc
+Summary:	HTML documentation for %{pkgname}
+Summary(pl.UTF-8):	Dokumentacja w formacie HTML dla %{pkgname}
+Group:		Documentation
+
+%description doc
+HTML documentation for %{pkgname}.
+
+%description doc -l pl.UTF-8
+Dokumentacja w formacie HTML dla %{pkgname}.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
