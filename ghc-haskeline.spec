@@ -1,12 +1,12 @@
 %define		pkgname	haskeline
 Summary:	A command-line interface for user input, written in Haskell
 Name:		ghc-%{pkgname}
-Version:	0.6.4.3
+Version:	0.7.0.3
 Release:	1
 License:	BSD
 Group:		Development/Languages
 Source0:	http://hackage.haskell.org/packages/archive/%{pkgname}/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	93d2f523608341cd56293edda00c4623
+# Source0-md5:	3a78043dc80b5510202e71e77c0a9923
 URL:		http://hackage.haskell.org/package/haskeline/
 BuildRequires:	ghc >= 6.12.3
 BuildRequires:	ghc-mtl
@@ -58,8 +58,9 @@ install -d $RPM_BUILD_ROOT%{_libdir}/%{ghcdir}/package.conf.d
 runhaskell Setup.hs copy --destdir=$RPM_BUILD_ROOT
 
 # work around automatic haddock docs installation
-rm -rf %{name}-%{version}-doc
+%{__rm} -rf %{name}-%{version}-doc
 cp -a $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/html %{name}-%{version}-doc
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 runhaskell Setup.hs register \
 	--gen-pkg-config=$RPM_BUILD_ROOT/%{_libdir}/%{ghcdir}/package.conf.d/%{pkgname}.conf
